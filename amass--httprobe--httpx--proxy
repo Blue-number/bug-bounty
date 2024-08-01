@@ -61,7 +61,7 @@ if [ -z "$httpx_path" ]; then
 else
   # 如果找到amass命令，执行子域名搜索操作
   echo "开始搜索域名的存活..."
-  proxychains4 cat $domain-httprobe.txt | $httpx_path -status-code -location -title -server -td -method -websocket -ip -cname -cdn -silent -prode -asn    >   $domain-httpx.txt
+  proxychains4 cat $domain-httprobe.txt | $httpx_path -status-code -location -title -server -td -method -websocket -ip -cname -cdn -silent  -asn    >   $domain-httpx.txt
   
   echo -e "\033[35mHttpx Done!!!\033[0m\n"
 fi
